@@ -18,18 +18,18 @@ Administrators can add, edit or delete games.
 Basic user can not add, edit or delete game.
 
 The guest users can register and log in. 
-RegisterUser|<email>|<password>|<confirmPassword>|<fullName> - That command add new user to the database in case of valid parameters. Otherwise print appropriate message informing why the user cannot be registered. 
+RegisterUser|email|password|confirmPassword|fullName - That command add new user to the database in case of valid parameters. Otherwise print appropriate message informing why the user cannot be registered. 
 The requirements for valid parameters are:
 Email – must contain @ sign and a period. It must be unique.
 Password – length must be at least 6 symbols and must contain at least 1 uppercase, 1 lowercase letter and 1 digit.
 Confirm Password – must match the provided password
-LoginUser|<email>|<password> - That command set the current logged in user if exists. Otherwise print appropriate message.
+LoginUser|email|password - That command set the current logged in user if exists. Otherwise print appropriate message.
 Logged in user can logout.
 Logout – That command log out the user from the system. If there is no logged in user print appropriate message.
 
 Administrator has the option to add/edit/delete games to the catalog. 
-AddGame|<title>|<price>|<size>|<trailer>|<thubnailURL>|<description>|<releaseDate>
-EditGame|<id>|<values> - A game should be edited in case of valid id. Otherwise print appropriate message.
+AddGame|title|price|size|trailer|thubnailURL|description|releaseDate
+EditGame|id|values - A game should be edited in case of valid id. Otherwise print appropriate message.
 A game should be added/edited only to the catalog if matches those criteria:
 Title – has to begin with uppercase letter and has length between 3 and 100 symbols (inclusive)
 Price –  must be a positive number with precision up to 2 digits after floating point
@@ -38,18 +38,18 @@ Trailer –  only videos from YouTube are allowed and only their ID should be sa
 For example, if the URL to the trailer is https://www.youtube.com/watch?v=edYCtaNueQY, the required part that must be saved into the database is edYCtaNueQY. That would be always the last 11 characters from the provided URL.
 Thumbnail URL – it should be a plain text starting with http://, https:// or null
 Description – must be at least 20 symbols
-DeleteGame|<id> - A game should be deleted in case of valid id. Otherwise print appropriate message.
+DeleteGame|id - A game should be deleted in case of valid id. Otherwise print appropriate message.
 
 The guest users can view games. 
 AllGame - print titles and price of all games.
-DetailsGame|<gameTitle> - print details for single game. 
+DetailsGame|gameTitle - print details for single game. 
 
 The logged in users can view owned games.
 OwnedGame – print games bought by currently logged in user.
 
 Each logged in user should be able to buy game. 
-AddItem|<gameTitle> - add game to shopping cart.
-RemoveItem|<gameTitle> - remove game from shopping cart.
+AddItem|gameTitle - add game to shopping cart.
+RemoveItem|gameTitle - remove game from shopping cart.
 BuyItem – buy all games from shopping cart.
 A user can buy a game only once!
 If he owns a game, he shouldn't be able to add it to the shopping cart.
