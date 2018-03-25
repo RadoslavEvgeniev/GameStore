@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JDBA_SoftUniGameStore.iml" filepath="$PROJECT_DIR$/JDBA_SoftUniGameStore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GameStore.iml" filepath="$PROJECT_DIR$/GameStore.iml" />
     </modules>
   </component>
 </project>

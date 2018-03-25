@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="GameStore" />
         <module name="JDBA_SoftUniGameStore" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="GameStore" target="1.8" />
       <module name="JDBA_SoftUniGameStore" target="1.8" />
     </bytecodeTargetLevel>
   </component>
